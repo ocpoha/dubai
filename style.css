@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+body {
+    font-family: 'Jua', sans-serif;
+    background-color: #ffeaa7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#game-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 400px;
+}
+
+h1 {
+    color: #d35400;
+    margin-bottom: 20px;
+}
+
+#score-board {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.station {
+    margin-bottom: 20px;
+}
+
+.pan {
+    width: 200px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #34495e;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    transition: all 0.3s ease;
+    border: 5px solid #2c3e50;
+}
+
+.pan.empty { background-color: #34495e; }
+.pan.batter { background-color: #f1c40f; } /* 반죽 */
+.pan.filling { background-color: #8e44ad; } /* 두바이 믹스 느낌 */
+.pan.baking { background-color: #e67e22; } /* 굽는중 */
+.pan.burnt { background-color: #2c3e50; } /* 태움 */
+
+.progress-container {
+    height: 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
+
+#baking-progress {
+    height: 100%;
+    width: 0%;
+    background-color: #e74c3c;
+    transition: width 0.1s linear;
+}
+
+.perfect-zone {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    left: 70%;  /* 70% ~ 90% 구간이 퍼펙트 */
+    background-color: rgba(46, 204, 113, 0.5);
+    border-left: 2px solid #27ae60;
+    border-right: 2px solid #27ae60;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.action-btn {
+    padding: 15px 10px;
+    font-size: 16px;
+    font-family: inherit;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.action-btn:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.action-btn:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+#message-area {
+    font-size: 18px;
+    color: #c0392b;
+    font-weight: bold;
+    min-height: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-btn {
+    padding: 15px 30px;
+    font-size: 24px;
+    font-family: inherit;
+    border: none;
+    border-radius: 10px;
+    background-color: #2ecc71;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.start-btn:hover {
+    background-color: #27ae60;
+}

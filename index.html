@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>두바이 쫀득 붕어빵 만들기!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>🐟 두바이 쫀득 붕어빵 만들기 🍫</h1>
+        
+        <div id="score-board">
+            <p>점수: <span id="score">0</span></p>
+            <p>남은 시간: <span id="time">30</span>초</p>
+        </div>
+
+        <div class="station">
+            <div id="bungeoppang-pan" class="pan empty">
+                <!-- 상태 아이콘 -->
+                <div id="status-icon"></div>
+            </div>
+            
+            <div class="progress-container">
+                <div id="baking-progress"></div>
+                <div class="perfect-zone"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="btn-batter" class="action-btn">1. 반죽 붓기</button>
+            <button id="btn-filling" class="action-btn" disabled>2. 두바이소 넣기</button>
+            <button id="btn-bake" class="action-btn" disabled>3. 굽기</button>
+            <button id="btn-harvest" class="action-btn" disabled>4. 꺼내기</button>
+        </div>
+        
+        <div id="message-area">게임을 시작하세요!</div>
+        <button id="btn-start" class="start-btn">게임 시작</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
